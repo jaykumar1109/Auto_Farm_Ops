@@ -1,0 +1,314 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{59128085-F5D7-416B-BA33-775818061920}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Auto_Farm_Ops</RootNamespace>
+    <AssemblyName>Auto_Farm_Ops</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44391</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Farming.mdf" />
+    <Content Include="App_Data\Farming_log.ldf">
+      <DependentUpon>Farming.mdf</DependentUpon>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="MyFarm\css\bootstrap.min.css" />
+    <Content Include="MyFarm\css\font-awesome.min.css" />
+    <Content Include="MyFarm\css\style.css" />
+    <Content Include="MyFarm\fonts\fontawesome-webfont.svg" />
+    <Content Include="MyFarm\images\ab1.jpg" />
+    <Content Include="MyFarm\images\ab2.jpg" />
+    <Content Include="MyFarm\images\ab3.jpg" />
+    <Content Include="MyFarm\images\ab4.jpg" />
+    <Content Include="MyFarm\images\b1.jpg" />
+    <Content Include="MyFarm\images\bb1.jpg" />
+    <Content Include="MyFarm\images\bb2.jpg" />
+    <Content Include="MyFarm\images\bb3.jpg" />
+    <Content Include="MyFarm\images\bb4.jpg" />
+    <Content Include="MyFarm\images\g1.jpg" />
+    <Content Include="MyFarm\images\g2.jpg" />
+    <Content Include="MyFarm\images\g3.jpg" />
+    <Content Include="MyFarm\images\g4.jpg" />
+    <Content Include="MyFarm\images\v1.jpg" />
+    <Content Include="MyFarm\images\v2.jpg" />
+    <Content Include="MyFarm\images\v3.jpg" />
+    <Content Include="MyFarm\images\v4.jpg" />
+    <Content Include="MyFarm\index.html" />
+    <Content Include="MyFarm\js\jquery.js" />
+    <Content Include="MyFarm\js\myscript.js" />
+    <Content Include="MyFarm\Pages\Contact Us.aspx" />
+    <Content Include="MyFarm\Pages\CoverTheCrop.aspx" />
+    <Content Include="MyFarm\Pages\CurrentCropDetails.aspx" />
+    <Content Include="MyFarm\Pages\Developer.aspx" />
+    <Content Include="MyFarm\Pages\EnergyAndEmployees.aspx" />
+    <Content Include="MyFarm\Pages\Facebook.aspx" />
+    <Content Include="MyFarm\Pages\Home.aspx" />
+    <Content Include="MyFarm\Pages\Login.aspx" />
+    <Content Include="MyFarm\Pages\Logout.aspx" />
+    <Content Include="MyFarm\Pages\Market.aspx" />
+    <Content Include="MyFarm\Pages\NaturalResourcesManagementSystem.aspx" />
+    <Content Include="MyFarm\Pages\PlanningForFutureCrop.aspx" />
+    <Content Include="MyFarm\Pages\ProfitLossDiagram.aspx" />
+    <Content Include="MyFarm\Pages\Registration.aspx" />
+    <Content Include="MyFarm\Pages\SoilManagementSystem.aspx" />
+    <Content Include="MyFarm\Pages\SunLightRegulatingSystem.aspx" />
+    <Content Include="MyFarm\Pages\WaterSupplyManagement.aspx" />
+    <Content Include="MyFarm\Pages\WeatherControlManagement.aspx" />
+    <Content Include="Registartion.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\Contact Us.aspx.cs">
+      <DependentUpon>Contact Us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\Contact Us.aspx.designer.cs">
+      <DependentUpon>Contact Us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\CoverTheCrop.aspx.cs">
+      <DependentUpon>CoverTheCrop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\CoverTheCrop.aspx.designer.cs">
+      <DependentUpon>CoverTheCrop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\CurrentCropDetails.aspx.cs">
+      <DependentUpon>CurrentCropDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\CurrentCropDetails.aspx.designer.cs">
+      <DependentUpon>CurrentCropDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\Developer.aspx.cs">
+      <DependentUpon>Developer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\Developer.aspx.designer.cs">
+      <DependentUpon>Developer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\EnergyAndEmployees.aspx.cs">
+      <DependentUpon>EnergyAndEmployees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\EnergyAndEmployees.aspx.designer.cs">
+      <DependentUpon>EnergyAndEmployees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\Facebook.aspx.cs">
+      <DependentUpon>Facebook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\Facebook.aspx.designer.cs">
+      <DependentUpon>Facebook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\Market.aspx.cs">
+      <DependentUpon>Market.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\Market.aspx.designer.cs">
+      <DependentUpon>Market.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\NaturalResourcesManagementSystem.aspx.cs">
+      <DependentUpon>NaturalResourcesManagementSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\NaturalResourcesManagementSystem.aspx.designer.cs">
+      <DependentUpon>NaturalResourcesManagementSystem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\PlanningForFutureCrop.aspx.cs">
+      <DependentUpon>PlanningForFutureCrop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\PlanningForFutureCrop.aspx.designer.cs">
+      <DependentUpon>PlanningForFutureCrop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\ProfitLossDiagram.aspx.cs">
+      <DependentUpon>ProfitLossDiagram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\ProfitLossDiagram.aspx.designer.cs">
+      <DependentUpon>ProfitLossDiagram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\SoilManagementSystem.aspx.cs">
+      <DependentUpon>SoilManagementSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\SoilManagementSystem.aspx.designer.cs">
+      <DependentUpon>SoilManagementSystem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\SunLightRegulatingSystem.aspx.cs">
+      <DependentUpon>SunLightRegulatingSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\SunLightRegulatingSystem.aspx.designer.cs">
+      <DependentUpon>SunLightRegulatingSystem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\WaterSupplyManagement.aspx.cs">
+      <DependentUpon>WaterSupplyManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\WaterSupplyManagement.aspx.designer.cs">
+      <DependentUpon>WaterSupplyManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyFarm\Pages\WeatherControlManagement.aspx.cs">
+      <DependentUpon>WeatherControlManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyFarm\Pages\WeatherControlManagement.aspx.designer.cs">
+      <DependentUpon>WeatherControlManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registartion.aspx.cs">
+      <DependentUpon>Registartion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registartion.aspx.designer.cs">
+      <DependentUpon>Registartion.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MyFarm\fonts\fontawesome-webfont.eot" />
+    <Content Include="MyFarm\fonts\fontawesome-webfont.ttf" />
+    <Content Include="MyFarm\fonts\fontawesome-webfont.woff" />
+    <Content Include="MyFarm\fonts\fontawesome-webfont.woff2" />
+    <Content Include="MyFarm\fonts\FontAwesome.otf" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51901</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44391/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
